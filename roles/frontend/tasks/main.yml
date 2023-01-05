@@ -1,3 +1,8 @@
-- name: tests for frontend
-  debug:
-    msg: frontend
+#- name: tests for frontend
+  #debug:
+    #msg: frontend
+
+- name: Install Nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: installed
