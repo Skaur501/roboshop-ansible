@@ -1,4 +1,5 @@
 - name: Run RoboShop Component
   hosts: all
+  become: yes # means it will become sudo as a root user to perform.
   roles:
     - "{{ ROLE_NAME }}"
