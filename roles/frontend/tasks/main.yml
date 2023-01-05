@@ -1,0 +1,3 @@
+- name: tests for frontend
+  debug:
+    msg: frontend
