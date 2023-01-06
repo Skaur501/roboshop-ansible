@@ -1,5 +1,4 @@
 # create an application user
-
 - name: Create an application USER
   when: APP_USER is defined
   ansible.builtin.user:
