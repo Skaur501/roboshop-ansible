@@ -3,7 +3,6 @@
 - name: Create an application USER
   when: APP_USER is defined
   ansible.builtin.user:
-  USER:
     name: "{{APP_USER}}"
 
 - name: Download APP Content
