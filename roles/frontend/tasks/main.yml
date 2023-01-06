@@ -8,3 +8,7 @@
     name: nginx # this name of package
     state: installed
 
+- name: Include Download app code tasks from common role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download-app-code
