@@ -2,7 +2,9 @@
   #debug:
     #msg: frontend
 
+# Install Nginx
 - name: Install Nginx # install nginx
   ansible.builtin.yum:
     name: nginx # this name of package
     state: installed
+
