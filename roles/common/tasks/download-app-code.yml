@@ -9,3 +9,16 @@
     url: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
     dest: /tmp/{{ COMPONENT }}.zip
 
+# Remove previous version of app
+- name: Recursively remove directory
+  ansible.builtin.file:
+    path: "{{ APP_LOC }}"
+    state: absent
+
+# unarchive a file
+- name: Download app content & extract it
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
+    dest: "{{ APP_LOC }}"
+    remote_src: yes
+
