@@ -2,7 +2,7 @@
 
 - name: Create an application USER
   when: APP_USER is defined
-  ansible.builtin.debug:
+  ansible.builtin.user:
   USER:
     name: "{{APP_USER}}"
 
