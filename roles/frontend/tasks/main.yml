@@ -18,12 +18,12 @@
 # Remove previous version of app
 - name: Recursively remove directory
   ansible.builtin.file:
-  path: "{{APP_LOC}}" # Here it is going remove the previous version of app
+  path: "{{ APP_LOC }}"
   state: absent
 
 # unarchive a file
-- name: Unarchive a file that is already on the remote machine
+- name: Download app content & extract it
   ansible.builtin.unarchive:
     src: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
-    dest: "{{APP_LOC}}"
+    dest: "{{ APP_LOC }}"
     remote_src: yes
