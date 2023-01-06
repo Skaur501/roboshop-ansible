@@ -15,10 +15,17 @@
     path: "{{ APP_LOC }}"
     state: absent
 
+# create a directory
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{ APP_LOC }}"
+    state: directory
+
 # unarchive a file
 - name: Download app content & extract it
   ansible.builtin.unarchive:
     src: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
     dest: "{{ APP_LOC }}"
     remote_src: yes
+
 
