@@ -7,6 +7,6 @@
     name: "{{APP_USER}}"
 
 - name: Download APP Content
-  ansible.builtin.get_url: https://github.com/roboshop-devops-project/${{ COMPONENT }}/archive/main.zip
-  URL:
+  ansible.builtin.get_url:
+    URL: https://github.com/roboshop-devops-project/${{ COMPONENT }}/archive/main.zip
     dest: /tmp/${{ COMPONENT }}.zip
