@@ -4,27 +4,27 @@
   ansible.builtin.user:
     name: "{{APP_USER}}"
 
-- name: Download APP Content
-  ansible.builtin.get_url:
-    url: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
-    dest: /tmp/{{ COMPONENT }}.zip
+#- name: Download APP Content
+#  ansible.builtin.get_url:
+#    url: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
+#    dest: /tmp/{{ COMPONENT }}.zip
 
 # Remove previous version of app
-- name: Recursively remove directory
+- name: Remove previous version of app
   ansible.builtin.file:
     path: "{{ APP_LOC }}"
     state: absent
 
-# create a directory
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: "{{ APP_LOC }}"
-    state: directory
+## create a directory
+#- name: Create a directory if it does not exist
+#  ansible.builtin.file:
+#    path: "{{ APP_LOC }}"
+#    state: directory
 
 # unarchive a file
 - name: Download app content & extract it
   ansible.builtin.unarchive:
-    src: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
+    src: https://codeload.github.com/Skaur501/{{ COMPONENT }}/zip/refs/heads/main
     dest: "/tmp"
     remote_src: yes
 
@@ -32,7 +32,7 @@
 - name: Copy file with owner and permissions
   ansible.builtin.copy:
     src: /tmp/{{ COMPONENT }}-main/
-    dest: "{{ APP_LOC }}"
+    dest: "{{ APP_LOC }}/"
     remote_src: yes
 
 
