@@ -35,3 +35,8 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: download-app-code
+
+- name: install npm dependencies
+  community.general.npm:
+    path: "{{ APP_LOC }}"
+
