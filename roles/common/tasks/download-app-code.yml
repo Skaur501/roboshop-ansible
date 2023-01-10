@@ -12,10 +12,10 @@
 # Remove previous version of app
 - name: Remove previous version of app
   ansible.builtin.file:
-    path: "{{ APP_LOC }}"
-    state: enabled
+    path: "{{APP_LOC}}"
+    state: absent
 
-## create a directory
+# create a directory
 #- name: Create a directory if it does not exist
 #  ansible.builtin.file:
 #    path: "{{ APP_LOC }}"
