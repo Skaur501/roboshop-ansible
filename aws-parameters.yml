@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: create value
-      community.aws.ws_ssm_parameter_store:
+      community.aws.aws_ssm_parameter_store:
         name: param_dev_catalogue_mongo
         value: "false"
         region: "us-east-1s"
