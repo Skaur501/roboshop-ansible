@@ -9,17 +9,17 @@
 #    url: https://github.com/roboshop-devops-project/{{ COMPONENT }}/archive/main.zip
 #    dest: /tmp/{{ COMPONENT }}.zip
 
-#Remove previous version of app
+# Remove previous version of app
 - name: Remove previous version of app
   ansible.builtin.file:
     path: "{{APP_LOC}}"
     state: absent
 
-# create a directory
-#- name: Create a directory if it does not exist
-#  ansible.builtin.file:
-#    path: "{{ APP_LOC }}"
-#    state: directory
+ #create a directory
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: "{{ APP_LOC }}"
+    state: directory
 
 # unarchive a file
 - name: Download app content & extract it
