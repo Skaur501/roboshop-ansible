@@ -40,3 +40,7 @@
   community.general.npm:
     path: "{{ APP_LOC }}"
 
+- name: Systemd tasks
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
