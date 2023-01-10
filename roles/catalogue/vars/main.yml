@@ -1,4 +1,4 @@
 COMPONENT: catalogue
 APP_USER: roboshop
 APP_LOC: /home/roboshop/catalogue
-SERVICE_NAME: catalogue
+#SERVICE_NAME: catalogue
