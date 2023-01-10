@@ -16,7 +16,7 @@
 
 - name: start {{ COMPONENT }} service
   ansible.builtin.systemd:
-    name: {{ COMPONENT }}
+    name: "{{ COMPONENT }}"
     state: restarted
     enabled: yes
     daemon-reload: yes
