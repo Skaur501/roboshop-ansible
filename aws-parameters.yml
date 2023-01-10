@@ -4,5 +4,5 @@
     - name: create value
       community.aws.aws_ssm_parameter_store:
         name: param_dev_catalogue_mongo
-        value: "false"
+        value: "xyz"
         region: "us-east-1"
