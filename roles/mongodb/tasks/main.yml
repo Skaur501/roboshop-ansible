@@ -1,7 +1,7 @@
 # Copy Mongodb yaml repo
 - name: Copy Mongodb Yum Repo File
   ansible.builtin.copy:
-    src: mongdb.repo
+    src: mongodb.repo
     dest: /etc/yum.repos.d/mongodb.repo
 
 # INSTALL Mongodb yum repo
