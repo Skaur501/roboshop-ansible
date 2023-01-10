@@ -2,6 +2,7 @@
 Description=Catalogue Service
 
 [Service]
+ENVIRONMENT=MONGO="{{ lookup('aws_ssm', 'param_{{ENV}}_dev_catalogue_MONGO' ,  region='us-east-1') }}"
 ExecStart=/usr/bin/node  /home/roboshop/catalogue/server.js
 
 [Install]
