@@ -3,6 +3,9 @@
   tasks:
     - name: create value
       community.aws.aws_ssm_parameter_store:
-        name: param_dev_catalogue_mongo
-        value: "xyz"
+        name: "{{item.name}}"
+        value: "{{item.value}}"
         region: "us-east-1"
+      loop:
+        - {name: "param_dev_catalogue_MONGO" , value: "true"}
+        - {name: "param_dev_user_MONGO" , value: "true"}
