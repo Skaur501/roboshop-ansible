@@ -1,4 +1,5 @@
 COMPONENT: catalogue
 APP_USER: roboshop
 APP_LOC: /home/roboshop/catalogue
-SERVICE_NAME: catalogue
+DBTYPE: mongo
+LOAD_SCHEMA: yes
