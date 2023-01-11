@@ -9,3 +9,8 @@
       loop:
         - {name: "param_dev_catalogue_MONGO" , value: "true"}
         - {name: "param_dev_user_MONGO" , value: "true"}
+        - {name: "param_dev_frontend_CATALOGUE_URL" , value: "http://dev-catalogue.sarbjeet310.online:8080/"}
+        - {name: "param_dev_frontend_USER_URL" , value: "http://dev-user.sarbjeet310.online:8080/"}
+        - {name: "param_dev_frontend_CART_URL" , value: "http://dev-cart.sarbjeet310.online:8080/"}
+        - {name: "param_dev_frontend_SHIPPING_URL" , value: "http://dev-shipping.sarbjeet310.online:8080/"}
+        - {name: "param_dev_frontend_PAYMENT_URL" , value: "http://dev-payment.sarbjeet310.online:8080/"}
