@@ -1,4 +1,4 @@
-- name: Create roboshop parameters
+- name: Create All Roboshop parameters
   hosts: localhost
   tasks:
     - name: create value
@@ -9,8 +9,10 @@
       loop:
         - {name: "param_dev_catalogue_MONGO" , value: "true"}
         - {name: "param_dev_catalogue_MONGO_ENDPOINT" , value: "dev-mongodb.sarbjeet310.online"}
-        - {name: "param_dev_frontend_CATALOGUE_URL" , value: "http://dev-catalogue.sarbjeet310.online:8080/"}
-        - {name: "param_dev_frontend_USER_URL" , value: "http://dev-user.sarbjeet310.online:8080/"}
-        - {name: "param_dev_frontend_CART_URL" , value: "http://dev-cart.sarbjeet310.online:8080/"}
-        - {name: "param_dev_frontend_SHIPPING_URL" , value: "http://dev-shipping.sarbjeet310.online:8080/"}
-        - {name: "param_dev_frontend_PAYMENT_URL" , value: "http://dev-payment.sarbjeet310.online:8080/"}
+        - {name: "param_dev_frontend_CATALOGUE_MONGO_URL" , value: "mongodb://dev-mongodb.sarbjeet310.online:27017/catalogue"}
+        - { name: "param_dev_frontend_CATALOGUE_URL", value: "http://dev-catalogue.sarbjeet310.online:8080/" }
+        - { name: "param_dev_frontend_USER_URL", value: "http://dev-user.sarbjeet310.online:8080/" }
+#        - {name: "param_dev_frontend_USER_URL" , value: "http://dev-user.sarbjeet310.online:8080/"}
+#        - {name: "param_dev_frontend_CART_URL" , value: "http://dev-cart.sarbjeet310.online:8080/"}
+#        - {name: "param_dev_frontend_SHIPPING_URL" , value: "http://dev-shipping.sarbjeet310.online:8080/"}
+#        - {name: "param_dev_frontend_PAYMENT_URL" , value: "http://dev-payment.sarbjeet310.online:8080/"}
