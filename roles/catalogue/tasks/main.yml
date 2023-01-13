@@ -1,4 +1,4 @@
-- name: Load nodejs
+- name: Load nodejs.groovy
   ansible.builtin.include_role:
     name: common
-    tasks_from: nodejs
+    tasks_from: nodejs.groovy

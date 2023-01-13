@@ -7,7 +7,7 @@
 #    STAT $?
 #
 #    PRINT "Install NodeJS"
-#    yum install nodejs -y &>>$LOG
+#    yum install nodejs.groovy -y &>>$LOG
 #    STAT $?
 #
 #
@@ -23,12 +23,12 @@
 #    SYSTEMD_SETUP
 #  }
 
-- name: Configure nodejs repo
+- name: Configure nodejs.groovy repo
   ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 - name: Install Nodejs repo
   ansible.builtin.yum:
-    name: nodejs
+    name: nodejs.groovy
     state: installed
 
 - name: Include Download app code tasks from Common role
